@@ -92,3 +92,40 @@ If the article takes 30 minutes or longer to read:
 
 There aren't tests for this feature, so you'll have to rely on running the code
 in the browser to see if your implementation works!
+## Blog Site
+
+A static personal blog built with React and Vite. The blog data lives in
+`src/data/blog.js` and is passed down from `App` to the other components as props.
+
+### How to run the project
+
+1. Clone the repository and move into it:
+   ```bash
+   git clone <your-repo-url>
+   cd react-components-props-vite-lab
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the dev server:
+   ```bash
+   npm run dev
+   ```
+4. Open http://localhost:5173/ in your browser.
+5. Run the tests:
+   ```bash
+   npx vitest run
+   ```
+
+### Component tree
+
+- `App` – gets data from `blog.js` and passes it down as props
+  - `Header` – shows the blog name (`name`)
+  - `About` – shows the logo and bio (`image`, `about`)
+  - `ArticleList` – loops over `posts`
+    - `Article` – shows one post (`title`, `date`, `preview`, `minutes`)
+
+### Screenshot
+
+![Blog home page](images/blog-home.png)
